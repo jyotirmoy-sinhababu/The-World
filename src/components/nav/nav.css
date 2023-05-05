@@ -1,0 +1,10 @@
+.nav-cnt {
+  display: flex;
+  align-items: center;
+  padding-left: 150px;
+  gap: 1000px;
+  width: 1432px;
+  max-width: 100%;
+  border-bottom: 1px black solid;
+  height: 69px;
+}
