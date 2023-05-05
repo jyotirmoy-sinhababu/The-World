@@ -13,7 +13,12 @@ const Nav = () => {
         <p className='para'>Where in the world?</p>
       </div>
       <div className='nav-btn-cnt'>
-        <button className='nav-btn' onClick={setIsLight(false)}>
+        <button
+          className='nav-btn'
+          onClick={() => {
+            setIsLight(false);
+          }}
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='16'
