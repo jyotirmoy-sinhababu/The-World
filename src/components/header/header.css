@@ -1,3 +1,34 @@
+.header-cnt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 100%;
+  height: 69px;
+  padding-top: 30px;
+}
+
+.header-frm {
+  width: 420px;
+  border: 1px solid black;
+}
+
+.header-search-btn {
+  width: 60px;
+  height: 57px;
+  border: none;
+  background-color: white;
+}
+
+.search-box {
+  width: 360px;
+  height: 57px;
+  border: none;
+  font-size: 16px;
+}
+/* second part of header comp*/
+
 .header-drpDownnBtn-cnt {
   display: flex;
   flex-direction: column;
@@ -25,6 +56,7 @@
 }
 
 .header-drp-btn {
-  width: 152px;
-  height: 50px;
+  width: 182px;
+  height: 57px;
+  background-color: white;
 }

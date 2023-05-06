@@ -19,7 +19,11 @@ const Header = () => {
         <button className='header-search-btn'>
           <BsSearch />
         </button>
-        <input type='search' className='search-box' />
+        <input
+          type='search'
+          className='search-box'
+          placeholder='search for country...'
+        />
       </form>
       <div className='header-drpDownnBtn-cnt'>
         <button onClick={handleClick} className='header-drp-btn'>

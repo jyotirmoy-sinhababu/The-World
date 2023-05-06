@@ -9,6 +9,7 @@ const FetchData = ({ children }) => {
   const [allData, setAllData] = useState();
   const [isLight, setIsLight] = useState(true);
 
+  console.log(isLight);
   useEffect(() => {
     try {
       axios.get('https://restcountries.com/v3.1/all').then((res) => {
@@ -20,7 +21,7 @@ const FetchData = ({ children }) => {
     }
   }, []);
   return (
-    <ApiDataContext.Provider value={{ allData, setIsLight }}>
+    <ApiDataContext.Provider value={{ allData, setIsLight, isLight }}>
       {children}
     </ApiDataContext.Provider>
   );

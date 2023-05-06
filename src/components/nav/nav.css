@@ -1,3 +1,5 @@
+@import url('https://fonts.google.com/specimen/Nunito+Sans');
+
 .nav-cnt {
   display: flex;
   align-items: center;
@@ -7,4 +9,38 @@
   max-width: 100%;
   border-bottom: 1px black solid;
   height: 69px;
+}
+.nav-para {
+  color: hsl(200, 15%, 8%);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.nav-btn-light {
+  background-color: white;
+  border: none;
+  font-size: 18px;
+}
+
+/*
+dark mode
+*/
+
+.nav-dark {
+  background-color: hsl(207, 26%, 17%);
+}
+
+.para-dark {
+  color: aliceblue;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.nav-btn-dark {
+  background-color: hsl(207, 26%, 17%);
+  border: none;
+  font-size: 18px;
+  color: aliceblue;
 }
