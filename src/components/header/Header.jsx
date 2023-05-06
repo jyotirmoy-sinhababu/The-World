@@ -14,15 +14,15 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <form>
-        <button>
+    <div className='header-cnt'>
+      <form className='header-frm'>
+        <button className='header-search-btn'>
           <BsSearch />
         </button>
         <input type='search' className='search-box' />
       </form>
-      <div>
-        <button onClick={handleClick} className=''>
+      <div className='header-drpDownnBtn-cnt'>
+        <button onClick={handleClick} className='header-drp-btn'>
           Filter by Region v
         </button>
         <div className={`select-btn-cnt ${!isSelect ? 'active' : 'inactive'}`}>
