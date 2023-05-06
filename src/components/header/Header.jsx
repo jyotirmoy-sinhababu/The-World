@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import './header.css';
 
 const Header = () => {
+  const [isSelect, setIsSelect] = useState(true);
+
+  const handleClick = () => {
+    setIsSelect(true);
+  };
+
   return (
     <div>
       <form>
@@ -19,14 +27,16 @@ const Header = () => {
         <input type='search' className='search-box' />
       </form>
       <div>
-        <select>
-          <option selected> Filter by Region</option>
-          <option>Africa</option>
-          <option>America</option>
-          <option>Asia</option>
-          <option>Europe</option>
-          <option>Oceania</option>
-        </select>
+        <button onClick={handleClick} className=''>
+          Filter by Region v
+        </button>
+        <div className={`select-btn-cnt ${isSelect ? 'active' : 'inactive'}`}>
+          <button className='select-btn'>Africa</button>
+          <button className='select-btn'>America</button>
+          <button className='select-btn'>Asia</button>
+          <button className='select-btn'>Europe</button>
+          <button className='select-btn'>Oceania</button>
+        </div>
       </div>
     </div>
   );
