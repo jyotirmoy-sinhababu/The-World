@@ -13,3 +13,7 @@
   background-color: white;
   padding-right: 70px;
 }
+
+.active {
+  display: none;
+}
