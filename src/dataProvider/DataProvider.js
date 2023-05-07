@@ -6,14 +6,14 @@ import { createContext } from 'react';
 export const ApiDataContext = createContext();
 
 const FetchData = ({ children }) => {
-  //  online status and error
+  //  online status
   const [isOnline, setIsOnline] = useState(true);
-  const [isError, setIsError] = useState(true);
 
   // use state hook hold api data for three separate conditions,
   const [allData, setAllData] = useState();
   const [dataBySearch, setDataBySearch] = useState();
   const [dataByRegion, setDataByRegion] = useState();
+  const [countryNameClicked, setCountryNameClicked] = useState();
 
   // holds the data to toggle between light and dark.
   const [isLight, setIsLight] = useState(true);
@@ -27,16 +27,13 @@ const FetchData = ({ children }) => {
       axios.get('https://restcountries.com/v3.1/all').then((res) => {
         if (res.status == 200) {
           console.log(res.data);
-          setAllData(res);
+          setAllData(res.data);
         }
       });
     } catch (err) {
       console.log(err);
     }
   }, []);
-
-  //check online status
-  const checkOnlineStatus = () => {};
 
   //handleChange for search
   const handleChange = (e) => {
@@ -82,7 +79,9 @@ const FetchData = ({ children }) => {
         isLight,
         dataBySearch,
         dataByRegion,
+        countryNameClicked,
         setIsLight,
+        setCountryNameClicked,
         handleChange,
         handleSearch,
         handleRegionChange,
