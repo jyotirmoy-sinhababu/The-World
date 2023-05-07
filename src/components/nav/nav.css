@@ -23,6 +23,10 @@
   font-size: 18px;
 }
 
+.nav-btn-light:hover {
+  box-shadow: 0 0 14px rgb(45, 44, 40);
+}
+
 /*
 dark mode
 */
@@ -39,8 +43,17 @@ dark mode
 }
 
 .nav-btn-dark {
+  display: flex;
   background-color: hsl(207, 26%, 17%);
   border: none;
   font-size: 18px;
   color: aliceblue;
+}
+
+.bi-sun-fill:hover {
+  color: orange;
+}
+
+.nav-btn-dark:hover {
+  color: orange;
 }
