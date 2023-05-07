@@ -10,7 +10,7 @@ const Card = ({ data }) => {
   return (
     <div>
       <div>
-        <img src={data.flags.svg} className='img' alt={data.flags.alt} />
+        <img src={data.flags.svg} className='card-img' alt={data.flags.alt} />
       </div>
       <div>
         <button onClick={(e) => {}}>{data.name.common}</button>
