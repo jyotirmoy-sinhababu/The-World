@@ -7,7 +7,7 @@ import { useContext } from 'react';
 import { ApiDataContext } from '../../dataProvider/DataProvider';
 
 const Header = () => {
-  const { isLight } = useContext(ApiDataContext);
+  const { isLight, handleChange, handleSearch } = useContext(ApiDataContext);
 
   const [isSelect, setIsSelect] = useState(false);
 
@@ -22,11 +22,16 @@ const Header = () => {
   return (
     <div className={`header-cnt ${!isLight ? 'header-dark' : 'header-light'}`}>
       <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSearch();
+        }}
         className={`header-frm ${
           !isLight ? 'header-frm-dark' : 'header-frm-light'
         }`}
       >
         <button
+          type='submit'
           className={`header-search-btn ${
             !isLight ? 'search-btn-dark' : 'search-btn-light'
           }`}
@@ -35,6 +40,10 @@ const Header = () => {
         </button>
         <input
           type='search'
+          onChange={(e) => {
+            handleChange(e);
+          }}
+          name='name'
           className={!isLight ? 'search-box-dark' : 'search-box'}
           placeholder='search for country...'
         />
