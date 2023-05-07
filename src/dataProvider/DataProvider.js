@@ -6,6 +6,10 @@ import { createContext } from 'react';
 export const ApiDataContext = createContext();
 
 const FetchData = ({ children }) => {
+  //  online status and error
+  const [isOnline, setIsOnline] = useState(true);
+  const [isError, setIsError] = useState(true);
+
   // use state hook hold api data for three separate conditions,
   const [allData, setAllData] = useState();
   const [dataBySearch, setDataBySearch] = useState();
@@ -17,21 +21,27 @@ const FetchData = ({ children }) => {
   //state to monitor searchbar
   const [searchInput, setSearchInput] = useState();
 
-  //handleChange for search
-  const handleChange = (e) => {
-    setSearchInput({ ...searchInput, [e.target.name]: e.target.value });
-  };
   // calls the api and fetch all data
   useEffect(() => {
     try {
       axios.get('https://restcountries.com/v3.1/all').then((res) => {
-        // console.log(res);
-        setAllData(res);
+        if (res.status == 200) {
+          console.log(res.data);
+          setAllData(res);
+        }
       });
     } catch (err) {
       console.log(err);
     }
   }, []);
+
+  //check online status
+  const checkOnlineStatus = () => {};
+
+  //handleChange for search
+  const handleChange = (e) => {
+    setSearchInput({ ...searchInput, [e.target.name]: e.target.value });
+  };
 
   // fetch by search details
   const handleSearch = async () => {
@@ -39,7 +49,10 @@ const FetchData = ({ children }) => {
       await axios
         .get(`https://restcountries.com/v3.1/name/${searchInput.name}`)
         .then((res) => {
-          setDataBySearch(res.data);
+          if (res.status == 200) {
+            setDataBySearch(res.data);
+            console.log(res);
+          }
         });
     } catch (err) {
       console.log(err);
@@ -52,8 +65,10 @@ const FetchData = ({ children }) => {
       await axios
         .get(`https://restcountries.com/v3.1/region/${region}`)
         .then((res) => {
-          setDataByRegion(res.data);
-          console.log(res.data);
+          if (res.status == 200) {
+            setDataByRegion(res.data);
+            console.log(res.data);
+          }
         });
     } catch (err) {
       console.log(err);
