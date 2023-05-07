@@ -25,7 +25,7 @@ const FetchData = ({ children }) => {
   useEffect(() => {
     try {
       axios.get('https://restcountries.com/v3.1/all').then((res) => {
-        console.log(res);
+        // console.log(res);
         setAllData(res);
       });
     } catch (err) {
@@ -46,9 +46,32 @@ const FetchData = ({ children }) => {
     }
   };
 
+  //fetch by region
+  const handleRegionChange = async (region) => {
+    try {
+      await axios
+        .get(`https://restcountries.com/v3.1/region/${region}`)
+        .then((res) => {
+          setDataByRegion(res.data);
+          console.log(res.data);
+        });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <ApiDataContext.Provider
-      value={{ allData, setIsLight, isLight, handleChange, handleSearch }}
+      value={{
+        allData,
+        isLight,
+        dataBySearch,
+        dataByRegion,
+        setIsLight,
+        handleChange,
+        handleSearch,
+        handleRegionChange,
+      }}
     >
       {children}
     </ApiDataContext.Provider>

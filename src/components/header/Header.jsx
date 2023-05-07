@@ -7,7 +7,8 @@ import { useContext } from 'react';
 import { ApiDataContext } from '../../dataProvider/DataProvider';
 
 const Header = () => {
-  const { isLight, handleChange, handleSearch } = useContext(ApiDataContext);
+  const { isLight, handleChange, handleSearch, handleRegionChange } =
+    useContext(ApiDataContext);
 
   const [isSelect, setIsSelect] = useState(false);
 
@@ -66,6 +67,9 @@ const Header = () => {
         </button>
         <div className={`select-btn-cnt ${!isSelect ? 'active' : 'inactive'}`}>
           <button
+            onClick={(Africa) => {
+              handleRegionChange('africa');
+            }}
             className={`select-btn ${
               !isLight ? 'select-btn-dark' : 'select - btn'
             }`}
@@ -73,6 +77,9 @@ const Header = () => {
             Africa
           </button>
           <button
+            onClick={() => {
+              handleRegionChange('america');
+            }}
             className={`select-btn ${
               !isLight ? 'select-btn-dark' : 'select - btn'
             }`}
@@ -80,6 +87,9 @@ const Header = () => {
             America
           </button>
           <button
+            onClick={(asia) => {
+              handleRegionChange('asia');
+            }}
             className={`select-btn ${
               !isLight ? 'select-btn-dark' : 'select - btn'
             }`}
@@ -87,6 +97,9 @@ const Header = () => {
             Asia
           </button>
           <button
+            onClick={(europe) => {
+              handleRegionChange('europe');
+            }}
             className={`select-btn ${
               !isLight ? 'select-btn-dark' : 'select - btn'
             }`}
@@ -94,6 +107,9 @@ const Header = () => {
             Europe
           </button>
           <button
+            onClick={(oceania) => {
+              handleRegionChange('oceania');
+            }}
             className={`select-btn ${
               !isLight ? 'select-btn-dark' : 'select - btn'
             }`}
