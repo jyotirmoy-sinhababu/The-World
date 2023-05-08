@@ -1,3 +1,23 @@
 .home-cnt-dark {
   background-color: hsl(207, 26%, 17%);
 }
+
+.home-card-cnt {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 100%;
+  display: grid;
+  column-gap: 50px;
+  row-gap: 50px;
+  grid-template-columns: 274px 274px 274px 274px;
+}
+
+.home-card-cnt-dark {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 100%;
+  display: grid;
+  column-gap: 50px;
+  row-gap: 50px;
+  grid-template-columns: 274px 274px 274px 274px;
+}

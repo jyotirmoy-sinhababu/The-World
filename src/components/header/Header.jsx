@@ -66,7 +66,11 @@ const Header = () => {
         >
           Filter by Region v
         </button>
-        <div className={`select-btn-cnt ${!isSelect ? 'active' : 'inactive'}`}>
+        <div
+          className={`select-btn-cnt  ${!isSelect ? 'active' : 'inactive'} ${
+            !isLight ? 'select-btn-cnt-dark' : null
+          }`}
+        >
           <button
             onClick={(Africa) => {
               handleRegionChange('africa');
