@@ -40,6 +40,7 @@ const Header = () => {
           <BsSearch />
         </button>
         <input
+          required
           type='search'
           onChange={(e) => {
             handleChange(e);

@@ -17,7 +17,7 @@ const HomePage = () => {
       {dataBySearch && dataBySearch.length ? (
         dataBySearch?.map((item) => {
           return (
-            <div>
+            <div key={item.population + item.area}>
               <Card data={item} />
             </div>
           );
@@ -25,7 +25,7 @@ const HomePage = () => {
       ) : dataByRegion && dataByRegion.length ? (
         dataByRegion?.map((item) => {
           return (
-            <div>
+            <div key={item.population + item.area}>
               <Card data={item} />
             </div>
           );
@@ -33,7 +33,7 @@ const HomePage = () => {
       ) : allData && allData.length ? (
         allData?.map((item) => {
           return (
-            <div>
+            <div key={item.population + item.area}>
               <Card data={item} />
             </div>
           );
