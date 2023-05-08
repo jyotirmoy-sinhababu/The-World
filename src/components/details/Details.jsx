@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ApiDataContext } from '../../dataProvider/DataProvider';
 
+import './details.css';
+
 import { useNavigate } from 'react-router-dom';
 
 import axios from 'axios';
@@ -29,9 +31,10 @@ const Details = () => {
     navigate('/home');
   };
   return (
-    <>
-      <div>
+    <div>
+      <div className='details-btn-cnt'>
         <button
+          className={`details-btn ${!isLight ? 'details-btn-dark' : null}`}
           onClick={() => {
             backBtnFunction();
           }}
@@ -41,10 +44,16 @@ const Details = () => {
       </div>
       {dtlData && dtlData.length ? (
         <div>
-          <div>
-            <div>
+          <div className='main-details-cnt'>
+            <div className='details-img-cnt'>
               {dtlData[0].flags ? (
-                <img src={dtlData[0].flags.svg} alt={dtlData[0].flags.alt} />
+                <img
+                  className={`details-img ${
+                    !isLight ? 'details-img-dark' : null
+                  }`}
+                  src={dtlData[0].flags.svg}
+                  alt={dtlData[0].flags.alt}
+                />
               ) : null}
             </div>
             <div>
@@ -94,7 +103,7 @@ const Details = () => {
       ) : (
         <div></div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -7,17 +7,17 @@
   padding-right: 150px;
   max-width: 100%;
   display: grid;
-  column-gap: 50px;
+  column-gap: 6%;
   row-gap: 50px;
-  grid-template-columns: 274px 274px 274px 274px;
+  grid-template-columns: auto auto auto auto;
 }
 
-.home-card-cnt-dark {
-  padding-left: 150px;
-  padding-right: 150px;
-  max-width: 100%;
-  display: grid;
-  column-gap: 50px;
-  row-gap: 50px;
-  grid-template-columns: 274px 274px 274px 274px;
+@media screen and (max-width: 1200px) {
+  .home-card-cnt {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-right: 80px;
+    padding-left: 80px;
+  }
 }

@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <div className={!isLight ? 'home-cnt-dark' : 'home-cnt'}>
       <Header />
-      <div className={!isLight ? 'home-card-cnt-dark' : 'home-card-cnt'}>
+      <div className='home-card-cnt'>
         {' '}
         {dataBySearch && dataBySearch.length ? (
           dataBySearch?.map((item) => {

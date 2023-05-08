@@ -1,0 +1,30 @@
+/*back-btn-night*/
+.details-btn-dark {
+  background-color: hsl(207, 26%, 17%);
+  color: white;
+}
+
+/*back-btn-light*/
+.details-btn {
+  width: 90px;
+  height: 40px;
+  font-size: 18px;
+}
+
+.details-btn-cnt {
+  padding-left: 150px;
+  padding-top: 50px;
+}
+
+.details-img {
+  height: 400px;
+  width: 600px;
+}
+
+.main-details-cnt {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 150px;
+  padding-top: 50px;
+  padding-left: 150px;
+}
