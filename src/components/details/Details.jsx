@@ -56,42 +56,74 @@ const Details = () => {
                 />
               ) : null}
             </div>
-            <div>
-              <div>
+            <div className='details-data-cnt'>
+              <div className='details-data-firstcnt'>
                 <div>
-                  {dtlData[0].name ? <p>{dtlData[0].name.common}</p> : null}
+                  {dtlData[0].name ? (
+                    <p
+                      className={`dtl-para-name ${
+                        !isLight ? 'dtl-para-dark' : 'dtl-para-name'
+                      }`}
+                    >
+                      {dtlData[0].name.common}
+                    </p>
+                  ) : null}
                 </div>
                 <div>
                   {dtlData[0].name.official ? (
-                    <p>
+                    <p
+                      className={`dtl-para ${
+                        !isLight ? 'dtl-para-dark' : 'null'
+                      }`}
+                    >
                       <strong>Official Name:</strong> {dtlData[0].name.official}
                     </p>
                   ) : null}
                   {dtlData[0].region ? (
-                    <p>
+                    <p
+                      className={`dtl-para ${
+                        !isLight ? 'dtl-para-dark' : 'null'
+                      }`}
+                    >
                       <strong>Region:</strong> {dtlData[0].region}
                     </p>
                   ) : null}
                   {dtlData[0].subregion ? (
-                    <p>
+                    <p
+                      className={`dtl-para ${
+                        !isLight ? 'dtl-para-dark' : 'null'
+                      }`}
+                    >
                       <strong>Sub-Region:</strong> {dtlData[0].subregion}
                     </p>
                   ) : null}
                   {dtlData[0].capital ? (
-                    <p>
+                    <p
+                      className={`dtl-para ${
+                        !isLight ? 'dtl-para-dark' : 'null'
+                      }`}
+                    >
                       <strong>Capital:</strong> {dtlData[0].capital[0]}
                     </p>
                   ) : null}
                 </div>
               </div>
-              <div>
+              <div className='details-data-secondcnt'>
                 {dtlData[0].tld ? (
-                  <p>
+                  <p
+                    className={`dtl-para ${
+                      !isLight ? 'dtl-para-dark' : 'null'
+                    }`}
+                  >
                     <strong>Top Level Domain:</strong> {dtlData[0].tld[0]}
                   </p>
                 ) : null}
                 {dtlData[0].currencies ? (
-                  <p>
+                  <p
+                    className={`dtl-para ${
+                      !isLight ? 'dtl-para-dark' : 'null'
+                    }`}
+                  >
                     <strong>Population:</strong>
                     {dtlData[0].population}
                   </p>

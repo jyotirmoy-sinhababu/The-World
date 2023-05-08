@@ -23,8 +23,32 @@
 
 .main-details-cnt {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-right: 150px;
   padding-top: 50px;
   padding-left: 150px;
+}
+
+.details-data-cnt {
+  display: flex;
+  gap: 24px;
+}
+
+.details-data-firstcnt {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dtl-para-name {
+  font-size: 45px;
+}
+
+.dtl-para-dark {
+  color: aliceblue;
+}
+
+.details-data-secondcnt {
+  padding-top: 76px;
 }
