@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
-
 import { ApiDataContext } from '../../dataProvider/DataProvider';
+
+import { useNavigate } from 'react-router-dom';
 
 import './card.css';
 
 const Card = ({ data }) => {
-  const { isLight } = useContext(ApiDataContext);
+  const navigate = useNavigate();
+
+  const { isLight, setCountryNameClicked } = useContext(ApiDataContext);
 
   return (
     <div className={!isLight ? 'main-card-cnt-dark' : 'main-card-cnt'}>
@@ -15,7 +18,10 @@ const Card = ({ data }) => {
       <div className='card-data-cnt'>
         <button
           className={!isLight ? 'card-btn-dark' : 'card-btn'}
-          onClick={(e) => {}}
+          onClick={() => {
+            setCountryNameClicked(data.name.common);
+            navigate('/dtls');
+          }}
         >
           {data.name.common}
         </button>

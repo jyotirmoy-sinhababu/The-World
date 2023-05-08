@@ -26,7 +26,6 @@ const FetchData = ({ children }) => {
     try {
       axios.get('https://restcountries.com/v3.1/all').then((res) => {
         if (res.status == 200) {
-          console.log(res.data);
           setAllData(res.data);
         }
       });
