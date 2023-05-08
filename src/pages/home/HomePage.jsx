@@ -3,7 +3,6 @@ import { ApiDataContext } from '../../dataProvider/DataProvider';
 
 import './homeStyle.css';
 
-import Nav from '../../components/nav/Nav';
 import Header from '../../components/header/Header';
 import Card from '../../components/card/Card';
 import Error from '../../components/error/Error';
@@ -14,17 +13,8 @@ const HomePage = () => {
 
   return (
     <div className={!isLight ? 'home-cnt-dark' : 'home-cnt'}>
-      <Nav />
       <Header />
-      {allData && allData.length ? (
-        allData?.map((item) => {
-          return (
-            <div>
-              <Card data={item} />
-            </div>
-          );
-        })
-      ) : dataBySearch && dataBySearch.length ? (
+      {dataBySearch && dataBySearch.length ? (
         dataBySearch?.map((item) => {
           return (
             <div>
@@ -34,6 +24,14 @@ const HomePage = () => {
         })
       ) : dataByRegion && dataByRegion.length ? (
         dataByRegion?.map((item) => {
+          return (
+            <div>
+              <Card data={item} />
+            </div>
+          );
+        })
+      ) : allData && allData.length ? (
+        allData?.map((item) => {
           return (
             <div>
               <Card data={item} />
