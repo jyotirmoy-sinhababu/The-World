@@ -4,6 +4,7 @@ import { ApiDataContext } from '../../dataProvider/DataProvider';
 import './details.css';
 
 import { useNavigate } from 'react-router-dom';
+import { AiOutlineDoubleLeft } from 'react-icons/ai';
 
 import axios from 'axios';
 
@@ -34,11 +35,14 @@ const Details = () => {
     <div>
       <div className='details-btn-cnt'>
         <button
-          className={`details-btn ${!isLight ? 'details-btn-dark' : null}`}
+          className={`details-btn ${
+            !isLight ? 'details-btn-dark' : 'details-btn-light'
+          }`}
           onClick={() => {
             backBtnFunction();
           }}
         >
+          <AiOutlineDoubleLeft />
           Back
         </button>
       </div>

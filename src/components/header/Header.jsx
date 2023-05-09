@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { BsSearch } from 'react-icons/bs';
 import './header.css';
@@ -9,6 +10,8 @@ import { ApiDataContext } from '../../dataProvider/DataProvider';
 const Header = () => {
   const { isLight, handleChange, handleSearch, handleRegionChange } =
     useContext(ApiDataContext);
+
+  const navigate = useNavigate();
 
   const [isSelect, setIsSelect] = useState(false);
 
@@ -26,6 +29,7 @@ const Header = () => {
         onSubmit={(e) => {
           e.preventDefault();
           handleSearch();
+          navigate('/search');
         }}
         className={`header-frm ${
           !isLight ? 'header-frm-dark' : 'header-frm-light'

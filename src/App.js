@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/home/HomePage';
 import MainCntPage from './pages/container/MainCntPage';
 import Details from './components/details/Details';
+import DisplaySearched from './pages/searchePage/DisplaySearched';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path='/home' element={<HomePage />} />
           <Route path='/dtls' element={<Details />} />
+          <Route path='/search' element={<DisplaySearched />} />
         </Route>
       </Routes>
     </FetchData>

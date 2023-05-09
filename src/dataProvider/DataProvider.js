@@ -49,6 +49,8 @@ const FetchData = ({ children }) => {
             setDataBySearch(res.data);
             console.log(res);
           }
+          if (res.status == 404) {
+          }
         });
     } catch (err) {
       console.log(err);
