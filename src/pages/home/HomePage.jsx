@@ -11,11 +11,12 @@ const HomePage = () => {
   const { isLight, allData, dataBySearch, dataByRegion } =
     useContext(ApiDataContext);
 
+  //handle back
+
   return (
     <div className={!isLight ? 'home-cnt-dark' : 'home-cnt'}>
       <Header />
       <div className='home-card-cnt'>
-        {' '}
         {dataBySearch && dataBySearch.length ? (
           dataBySearch?.map((item) => {
             return (
