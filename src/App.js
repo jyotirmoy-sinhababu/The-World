@@ -11,6 +11,7 @@ import DisplayRegion from './pages/searchePage/DisplayRegion';
 function App() {
   return (
     <FetchData>
+      {' '}
       <Routes>
         <Route path='/' element={<MainCntPage />}>
           <Route index element={<HomePage />} />

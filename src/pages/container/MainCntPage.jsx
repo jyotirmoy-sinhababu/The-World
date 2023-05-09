@@ -14,7 +14,13 @@ const MainCntPage = () => {
       className={`mainPage-cnt ${!isLight ? 'mainPage-cnt-dark' : 'mainpage'}`}
     >
       <Nav />
-      <Outlet />
+      <div
+        className={`mainPage-outlet-cnt ${
+          !isLight ? 'mainPage-outlet-cnt-dark' : 'mainPage-outlet-cnt'
+        }`}
+      >
+        <Outlet />
+      </div>
     </div>
   );
 };

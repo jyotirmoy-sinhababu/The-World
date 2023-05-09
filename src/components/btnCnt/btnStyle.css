@@ -1,0 +1,23 @@
+.back-btn-dark {
+  background-color: hsl(207, 26%, 17%);
+  color: aliceblue;
+}
+
+/*back-btn-light*/
+.back-btn {
+  display: flex;
+  align-items: center;
+  width: 90px;
+  height: 40px;
+  font-size: 28px;
+  border: none;
+}
+
+.back-btn-light {
+  background-color: white;
+}
+
+.back-btn-cnt {
+  padding-left: 150px;
+  padding-top: 50px;
+}

@@ -1,26 +1,4 @@
 /*back-btn-night*/
-.details-btn-dark {
-  background-color: hsl(207, 26%, 17%);
-}
-
-/*back-btn-light*/
-.details-btn {
-  display: flex;
-  align-items: center;
-  width: 90px;
-  height: 40px;
-  font-size: 28px;
-  border: none;
-}
-
-.details-btn-light {
-  background-color: white;
-}
-
-.details-btn-cnt {
-  padding-left: 150px;
-  padding-top: 50px;
-}
 
 .details-img-cnt {
   height: fit-content;

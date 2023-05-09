@@ -73,12 +73,13 @@ const Header = () => {
         </button>
         <div
           className={`select-btn-cnt  ${!isSelect ? 'active' : 'inactive'} ${
-            !isLight ? 'select-btn-cnt-dark' : null
+            !isLight ? 'select-btn-cnt-dark' : 'select-btn-cnt '
           }`}
         >
           <button
             onClick={(Africa) => {
               handleRegionChange('africa');
+              navigateToRegion('/region');
             }}
             className={`select-btn ${
               !isLight ? 'select-btn-dark' : 'select - btn'

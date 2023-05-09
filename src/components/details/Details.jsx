@@ -1,16 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ApiDataContext } from '../../dataProvider/DataProvider';
 
-import './details.css';
+import BtnCnt from '../../components/btnCnt/BtnCnt';
 
-import { useNavigate } from 'react-router-dom';
-import { AiOutlineDoubleLeft } from 'react-icons/ai';
+import './details.css';
 
 import axios from 'axios';
 
 const Details = () => {
-  const navigate = useNavigate();
-
   const { isLight, countryNameClicked } = useContext(ApiDataContext);
 
   const [dtlData, setDtlData] = useState([]);
@@ -28,24 +25,9 @@ const Details = () => {
     }
   }, [countryNameClicked]);
 
-  const backBtnFunction = () => {
-    navigate('/home');
-  };
   return (
     <div>
-      <div className='details-btn-cnt'>
-        <button
-          className={`details-btn ${
-            !isLight ? 'details-btn-dark' : 'details-btn-light'
-          }`}
-          onClick={() => {
-            backBtnFunction();
-          }}
-        >
-          <AiOutlineDoubleLeft />
-          Back
-        </button>
-      </div>
+      <BtnCnt />
       {dtlData && dtlData.length ? (
         <div>
           <div className='main-details-cnt'>
