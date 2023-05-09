@@ -12,6 +12,7 @@ const Header = () => {
     useContext(ApiDataContext);
 
   const navigate = useNavigate();
+  const navigateToRegion = useNavigate();
 
   const [isSelect, setIsSelect] = useState(false);
 
@@ -88,6 +89,7 @@ const Header = () => {
           <button
             onClick={() => {
               handleRegionChange('america');
+              navigateToRegion('/region');
             }}
             className={`select-btn ${
               !isLight ? 'select-btn-dark' : 'select - btn'
@@ -98,6 +100,7 @@ const Header = () => {
           <button
             onClick={(asia) => {
               handleRegionChange('asia');
+              navigateToRegion('/region');
             }}
             className={`select-btn ${
               !isLight ? 'select-btn-dark' : 'select - btn'
@@ -108,6 +111,7 @@ const Header = () => {
           <button
             onClick={(europe) => {
               handleRegionChange('europe');
+              navigateToRegion('/region');
             }}
             className={`select-btn ${
               !isLight ? 'select-btn-dark' : 'select - btn'
@@ -118,6 +122,7 @@ const Header = () => {
           <button
             onClick={(oceania) => {
               handleRegionChange('oceania');
+              navigateToRegion('/region');
             }}
             className={`select-btn ${
               !isLight ? 'select-btn-dark' : 'select - btn'

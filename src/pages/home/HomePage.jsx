@@ -8,7 +8,7 @@ import Card from '../../components/card/Card';
 import Error from '../../components/error/Error';
 
 const HomePage = () => {
-  const { isLight, allData, dataByRegion } = useContext(ApiDataContext);
+  const { isLight, allData } = useContext(ApiDataContext);
 
   //handle back
 

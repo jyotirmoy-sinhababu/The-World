@@ -6,6 +6,7 @@ import HomePage from './pages/home/HomePage';
 import MainCntPage from './pages/container/MainCntPage';
 import Details from './components/details/Details';
 import DisplaySearched from './pages/searchePage/DisplaySearched';
+import DisplayRegion from './pages/searchePage/DisplayRegion';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/home' element={<HomePage />} />
           <Route path='/dtls' element={<Details />} />
           <Route path='/search' element={<DisplaySearched />} />
+          <Route path='/region' element={<DisplayRegion />} />
         </Route>
       </Routes>
     </FetchData>
