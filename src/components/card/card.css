@@ -28,6 +28,7 @@
   width: fit-content;
   border: none;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .card-data {
@@ -55,6 +56,7 @@
   border: none;
   font-weight: 700;
   color: aliceblue;
+  cursor: pointer;
 }
 
 .card-data-dark {

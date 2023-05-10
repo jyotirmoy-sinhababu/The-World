@@ -7,3 +7,15 @@
   max-width: 100%;
   gap: 73px;
 }
+
+@media screen and (max-width: 600px) {
+  .searched-page-cnt {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 65px;
+    padding-right: 50px;
+    padding-top: 55px;
+    max-width: 100%;
+    gap: 43px;
+  }
+}

@@ -22,3 +22,15 @@
   padding-left: 150px;
   padding-top: 50px;
 }
+
+@media screen and (max-width: 600px) {
+  .back-btn-cnt {
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+
+  .back-btn-dark {
+    background-color: hsl(207, 26%, 17%);
+    color: aliceblue;
+  }
+}
