@@ -8,7 +8,7 @@ import BtnCnt from '../../components/btnCnt/BtnCnt';
 import './searchPageStyle.css';
 
 const DisplaySearched = () => {
-  const { isLight, dataBySearch } = useContext(ApiDataContext);
+  const { isLight, dataBySearch, isErr } = useContext(ApiDataContext);
 
   return (
     <>
@@ -22,11 +22,11 @@ const DisplaySearched = () => {
               </div>
             );
           })
-        ) : (
+        ) : isErr ? (
           <div>
             <Error />
           </div>
-        )}
+        ) : null}
       </div>
     </>
   );

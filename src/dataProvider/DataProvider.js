@@ -8,6 +8,7 @@ export const ApiDataContext = createContext();
 const FetchData = ({ children }) => {
   //  online status
   const [isOnline, setIsOnline] = useState(true);
+  const [isErr, setIsErr] = useState(true);
 
   // use state hook hold api data for three separate conditions,
   const [allData, setAllData] = useState();
@@ -27,6 +28,9 @@ const FetchData = ({ children }) => {
       axios.get('https://restcountries.com/v3.1/all').then((res) => {
         if (res.status == 200) {
           setAllData(res.data);
+        }
+        if (res.status == 404) {
+          setIsErr(false);
         }
       });
     } catch (err) {
@@ -50,6 +54,7 @@ const FetchData = ({ children }) => {
             console.log(res);
           }
           if (res.status == 404) {
+            setIsErr(false);
           }
         });
     } catch (err) {
@@ -67,6 +72,9 @@ const FetchData = ({ children }) => {
             setDataByRegion(res.data);
             console.log(res.data);
           }
+          if (res.status == 404) {
+            setIsErr(false);
+          }
         });
     } catch (err) {
       console.log(err);
@@ -78,6 +86,7 @@ const FetchData = ({ children }) => {
       value={{
         allData,
         isLight,
+        isErr,
         dataBySearch,
         dataByRegion,
         countryNameClicked,

@@ -8,7 +8,7 @@ import Card from '../../components/card/Card';
 import Error from '../../components/error/Error';
 
 const HomePage = () => {
-  const { isLight, allData } = useContext(ApiDataContext);
+  const { isLight, allData, isErr } = useContext(ApiDataContext);
 
   //handle back
 
@@ -24,11 +24,11 @@ const HomePage = () => {
               </div>
             );
           })
-        ) : (
+        ) : !isErr ? (
           <div className='home-err-cnt'>
             <Error />
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );
