@@ -23,6 +23,9 @@
 .details-data-cnt {
   display: flex;
   gap: 24px;
+  height: 400px;
+  width: 500px;
+  padding-left: 40px;
 }
 
 .details-data-firstcnt {

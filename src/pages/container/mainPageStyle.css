@@ -3,9 +3,5 @@
 }
 
 .mainPage-cnt {
-  max-height: 100%;
-}
-
-.mainPage-outlet-cnt {
-  height: 786px;
+  min-height: 100vh;
 }
