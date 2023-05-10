@@ -21,3 +21,10 @@
     padding-left: 80px;
   }
 }
+
+.home-err-cnt {
+  padding-left: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bruno+Ace+SC&family=Nunito+Sans:ital,wght@1,200&display=swap');
+
+.error-cnt {
+  padding-top: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-cnt :hover {
+  color: red;
+}
+
+.error-cnt-dark {
+  background-color: hsl(207, 26%, 17%);
+}
+
+.error-txt {
+  font-size: 76px;
+  font-weight: 600;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.error-txt-dark {
+  color: aliceblue;
+}

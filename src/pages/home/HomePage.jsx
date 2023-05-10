@@ -25,7 +25,9 @@ const HomePage = () => {
             );
           })
         ) : (
-          <Error />
+          <div className='home-err-cnt'>
+            <Error />
+          </div>
         )}
       </div>
     </div>
