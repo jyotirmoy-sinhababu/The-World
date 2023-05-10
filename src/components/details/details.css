@@ -45,3 +45,30 @@
 .details-data-secondcnt {
   padding-top: 76px;
 }
+
+@media screen and (max-width: 600px) {
+  .main-details-cnt {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+
+  .details-img {
+    height: 200px;
+    width: 300px;
+    border: 0.8px solid black;
+  }
+
+  .details-data-cnt {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 300px;
+    width: 500px;
+    padding-left: 0px;
+  }
+}
