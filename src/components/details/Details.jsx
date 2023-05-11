@@ -19,7 +19,6 @@ const Details = () => {
         .get(`https://restcountries.com/v3.1/name/${countryNameClicked}`)
         .then((res) => {
           setDtlData(res.data);
-          console.log(res.data);
         });
     } catch (err) {
       console.log(err);

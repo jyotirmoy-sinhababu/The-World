@@ -29,7 +29,7 @@ const FetchData = ({ children }) => {
         if (res.status == 200) {
           setAllData(res.data);
         }
-        if (res.status == 404) {
+        if (res.status != 200) {
           setIsErr(false);
         }
       });
@@ -51,9 +51,8 @@ const FetchData = ({ children }) => {
         .then((res) => {
           if (res.status == 200) {
             setDataBySearch(res.data);
-            console.log(res);
           }
-          if (res.status == 404) {
+          if ((res.status = !200)) {
             setIsErr(false);
           }
         });
@@ -70,9 +69,8 @@ const FetchData = ({ children }) => {
         .then((res) => {
           if (res.status == 200) {
             setDataByRegion(res.data);
-            console.log(res.data);
           }
-          if (res.status == 404) {
+          if (res.status != 200) {
             setIsErr(false);
           }
         });
