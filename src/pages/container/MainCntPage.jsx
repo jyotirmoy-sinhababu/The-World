@@ -4,6 +4,8 @@ import { Outlet } from 'react-router-dom';
 import { ApiDataContext } from '../../dataProvider/DataProvider';
 
 import Nav from '../../components/nav/Nav';
+import Footer from '../../components/footer/Footer';
+
 import './mainPageStyle.css';
 
 const MainCntPage = () => {
@@ -21,6 +23,7 @@ const MainCntPage = () => {
       >
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 };

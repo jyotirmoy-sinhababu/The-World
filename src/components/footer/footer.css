@@ -1,0 +1,15 @@
+.footer-cnt {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-txt {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 700;
+  color: orange;
+}
